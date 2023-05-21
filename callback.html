@@ -1,0 +1,45 @@
+<!-- Callbacks are just the name of a convention for using Javascript functions.
+There isn't special thing called a 'callback' in the javascript language it's just
+a convention.Instead of immediately returning some result like most functions,
+functions that use callbacks take some time to produce a result.
+
+
+The word 'asynchronous' aka 'async' just means 'takes some time' or 'happen' in the future
+,not right now.Usually callbacks / zare only used when doing I/O eg downloading things,reading files,
+talking to databases etc. -->
+
+
+<script>
+    //API 
+    //1: 2s student roll not
+    //2: 2s 2nd name and age
+    //3: 2s gender
+
+
+    const getRollNo=()=>{
+        setTimeout(()=>{
+            console.log(`API getting roll no`);
+            let roll_no=[1,2,3,4,5];
+            console.log(roll_no);
+            
+            setTimeout((rollno)=>{
+                const biodata={
+                    name:'vinod',
+                    age:26,
+
+                }
+                console.log(`My roll number is ${rollno} My name is ${biodata.name} and Iam ${biodata.age} years old `);
+
+                setTimeout((name)=>{
+                      biodata.gender='Male';
+                      console.log(`My roll number is ${rollno} My name is ${biodata.name} and Iam ${biodata.age} years old and Iam an alpha ${biodata.gender}`);
+
+                },2000,biodata.name)
+
+            },2000,roll_no[1])
+
+        },2000);
+    }
+
+    getRollNo();
+</script>

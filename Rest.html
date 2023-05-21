@@ -1,0 +1,37 @@
+<script>
+
+// es5
+// function sum(...inputs){
+//     // console.log(...inputs);
+//     let total=0;
+//     for(let i of inputs)
+//     {
+//           total+=i;
+//     }
+//     console.log(total);
+// }
+
+// sum(1,2,3,4,5,6,7,8,9,10);
+
+
+
+// Let's make use of the rest parameter with some other arguments
+// inside a function , like this:
+
+// rest with function and other arguments
+
+function fun(a,b,...c){
+    console.log(a,b,...c);
+    console.log(`${a} ${b}`);
+    console.log(c);
+    console.log(c[0]);
+    console.log(c.length);
+    console.log(c.indexOf('Edan'));
+
+}
+
+fun('Ronaldo','Neymar','Pele','Messi','Edan');
+
+
+
+</script>

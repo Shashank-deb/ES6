@@ -1,0 +1,55 @@
+<!-- Javascript classes, introduced in ECMAScript 2015 , are primarily syntactical sugar over 
+Javascript's existing prototype-based inheritabnce
+
+
+A class is a type of function , but instead of using the keyword function to initiate it, we use the 
+keyword class, and the properties are assigned inside  a constructor() method .
+
+
+
+A class is user defined blueprint or prototype from which objects are created.It 
+represents the set of properties or methods that are common to all objects of one 
+type. -->
+
+<script>
+  // function students(){
+
+  // }
+
+  class Students {
+    constructor(name, age, branch) {
+      this.myname = name;
+      this.myage = age;
+      this.mybranch = branch;
+    }
+
+    // instance method of the Students class
+    biodata() {
+   
+      return  `Hi Iam class method ${this.myname} my age is : ${this.myage} and mybranch is : ${this.mybranch}`
+    
+    }
+  }
+
+  class Player extends Students {
+    constructor(name, age, branch, game) {
+      super(name, age, branch);
+      this.mygame = game;
+    }
+
+    
+
+    play_biodata(){
+        
+         return  `${super.biodata()}. Iam   player of ${this.mygame}`;
+  
+    }
+  }
+
+  let obj1 = new Player("Shashank", "22", "Information Technology", "Football");
+  // let obj2=new Player('Amul','21','BCS');
+  // console.log(obj1);
+  // obj1.biodata();
+  // obj2.biodata();
+ console.log(obj1.play_biodata()); 
+</script>

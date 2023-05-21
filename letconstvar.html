@@ -1,0 +1,114 @@
+<script>
+    // Not recommended to  used var
+    //  Always used let and const for data types declaration
+    // 'var' datatypes is function scope
+    // var name="vinod";
+    // console.log(name);
+
+
+    // Whereas 'let' and 'const' is block scope
+    // let name="bahadur";
+    // console.log(name);
+
+
+    // const name="Thapa";
+    // console.log(name);
+
+
+    // var name="vinod";
+    // name="thapa";
+    // console.log(name);
+
+
+    // let name="vinod";
+    // name="thapa";
+    // console.log(name);
+
+
+    // This is given error because constant value 
+    // is not modify once declare and assigned
+    // const name="vinod";
+    // name="thapa";
+    // console.log(name);
+
+
+    // function modJS(love){
+    //     if(love){
+    //         let name="Shashank"
+    //         const sname="Sharma";
+    //         console.log("My name is: "+name+" "+sname);
+    //     }
+    // }
+
+
+    // function modJS(love){
+    //     if(love){
+    //         var name="Shashank"
+    //         var sname="Sharma";
+           
+    //     }
+
+    //     console.log("My name is: "+name+" "+sname);
+    // }
+
+
+
+
+    // Giving the error because let and const is block statement 
+    // But access in function scope given the error
+    // function modJS(love){
+    //     if(love){
+    //         let name="Shashank"
+    //         const sname="Sharma";
+           
+    //     }
+
+    //     console.log("My name is: "+name+" "+sname);
+    // }
+
+
+
+    // var example
+    // var whoWillWinToday="India";
+    // if(true){
+    //     var whoWillWinToday="NewZeland";
+    //     console.log(whoWillWinToday);
+    // }
+
+    // console.log(whoWillWinToday);
+    // Op->NewZeland, NewZeland
+
+
+
+    //  let example
+    // let whoWillWinToday="India";
+    // if(true){
+    //     let whoWillWinToday="NewZeland";
+    //     console.log(whoWillWinToday);
+    // }
+
+    // console.log(whoWillWinToday);
+    //Op->NewZeland,India
+
+
+
+
+    //const example
+    // const whoWillWinToday="India";
+    // if(true){
+    //     const whoWillWinToday="NewZeland";
+    //     console.log(whoWillWinToday);
+    // }
+
+    // console.log(whoWillWinToday);
+    // Op->NewZeland,India
+
+
+
+    
+
+    modJS(true);
+
+
+
+</script>
